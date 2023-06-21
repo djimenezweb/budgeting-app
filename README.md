@@ -15,3 +15,4 @@ This approach takes advantage of the new features of React Router 6.8:
 - React Router 6.8
 - Vite 4.3.9
 - Heroicons 2.0.18
+- React Toastify 9.1.3

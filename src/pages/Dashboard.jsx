@@ -1,14 +1,16 @@
 import { useLoaderData } from 'react-router-dom';
 import { fetchData } from '../utils/helpers';
+import Intro from '../components/Intro';
 
 const Dashboard = () => {
   const { userName } = useLoaderData();
-  return (
-    <div>
-      <h1>{userName}</h1>
-      <p>Dashboard</p>
-    </div>
-  );
+  return <>{userName ? <p>{userName}</p> : <Intro />}</>;
+};
+
+// action
+export const dashboardAction = async ({ request }) => {
+  const data = await request.formData();
+  console.log({ data, request });
 };
 
 // loader function
