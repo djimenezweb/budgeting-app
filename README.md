@@ -9,8 +9,9 @@ This approach takes advantage of the new features of React Router 6.8:
 - You can access to the current state of the form submission
 - Fetcher functions can handle multiple submissions
 
-## Technologies
+## Dependencies
 
 - React 18.2
 - React Router 6.8
 - Vite 4.3.9
+- Heroicons 2.0.18

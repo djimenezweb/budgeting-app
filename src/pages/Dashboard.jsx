@@ -3,7 +3,12 @@ import { fetchData } from '../utils/helpers';
 
 const Dashboard = () => {
   const { userName } = useLoaderData();
-  return <div>Dashboard{userName}</div>;
+  return (
+    <div>
+      <h1>{userName}</h1>
+      <p>Dashboard</p>
+    </div>
+  );
 };
 
 // loader function
