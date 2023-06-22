@@ -11,8 +11,9 @@ This approach takes advantage of the new features of React Router 6.8:
 
 ## Dependencies
 
-- React 18.2
-- React Router 6.8
-- Vite 4.3.9
-- Heroicons 2.0.18
-- React Toastify 9.1.3
+- [react 18.2.0](https://www.npmjs.com/package/react)
+- [react-dom 18.2.0](https://www.npmjs.com/package/react-dom)
+- [react-router-dom 6.8.0](https://www.npmjs.com/package/react-router-dom)
+- [react-toastify 9.1.3](https://www.npmjs.com/package/react-toastify)
+- [vite 4.1.0](https://www.npmjs.com/package/vite)
+- [@heroicons/react 2.0.18](https://www.npmjs.com/package/@heroicons/react)

@@ -11,13 +11,14 @@ const Intro = () => {
         <p>Personal budgeting is the secret to financial freedom. Start your journey today.</p>
         <Form method="post">
           <input type="text" name="userName" placeholder="What is your name?" autoComplete="given-name" required aria-label="Enter your name" />
+          <input type="hidden" name="_action" value="newUser" />
           <button type="submit" className="btn btn--dark">
             <span>Create Account</span>
             <UserPlusIcon width={20} />
           </button>
         </Form>
       </div>
-      <img src="/assets/illustration.jpg" alt="Person with money" />
+      <img src="/assets/illustration.jpg" alt="Person with money" width={600} />
     </div>
   );
 };
