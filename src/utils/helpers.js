@@ -14,9 +14,16 @@ export const deleteItem = ({ key }) => {
   return localStorage.removeItem(key);
 };
 
-// Add budget to Local Storage
+// Add Budget to Local Storage
 export const createBudget = ({ name, amount }) => {
   const newItem = { id: crypto.randomUUID(), name, amount: Number(amount), color: generateRandomColor(), createdAt: Date.now() };
   const existingBudgets = fetchData('budgets') ?? [];
   return localStorage.setItem('budgets', JSON.stringify([newItem, ...existingBudgets]));
+};
+
+// Add Expense to Local Storage
+export const createExpense = ({ name, amount, budgetId }) => {
+  const newItem = { id: crypto.randomUUID(), name, amount: Number(amount), budgetId, createdAt: Date.now() };
+  const existingExpenses = fetchData('expenses') ?? [];
+  return localStorage.setItem('expenses', JSON.stringify([newItem, ...existingExpenses]));
 };
