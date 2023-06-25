@@ -27,3 +27,27 @@ export const createExpense = ({ name, amount, budgetId }) => {
   const existingExpenses = fetchData('expenses') ?? [];
   return localStorage.setItem('expenses', JSON.stringify([newItem, ...existingExpenses]));
 };
+
+// Total spent by budget
+export const calculateSpentByBudget = budgetId => {
+  const expenses = fetchData('expenses') ?? [];
+  const budgetSpent = expenses.reduce((acc, expense) => {
+    // Esto es una especie de filtro para recuperar únicamente los gastos cuyo id sea el mismo que budgetId
+    if (expense.budgetId !== budgetId) return acc;
+    return (acc += expense.amount);
+  }, 0);
+  return budgetSpent;
+};
+
+// Format currency
+export const formatCurrency = amount => {
+  return amount.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
+};
+
+// Format percentages
+export const formatPercentages = amount => {
+  return amount.toLocaleString('es-ES', { style: 'percent', minimumFractionDigits: 0 });
+};
+
+// Format Date to Local String
+export const formatDateToLocaleString = epoch => new Date(epoch).toLocaleDateString('es-ES');
